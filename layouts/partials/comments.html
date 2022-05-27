@@ -1,0 +1,18 @@
+<!-- valine -->
+<div class="doc_comments">
+    <div class="comments_block_title">发表评论</div>
+    <div id="comments"></div>
+</div>
+
+<script src="{{ "https://unpkg.com/leancloud-storage@4.12.2/dist/av-min.js" }}"></script>
+<script src="{{ "https://unpkg.com/valine@1.4.18/dist/Valine.min.js" }}"></script>
+
+<script type="text/javascript">
+    new Valine({
+        el: '#comments',
+        appId: '{{ .Site.Params.valine.appId }}',
+        appKey: '{{ .Site.Params.valine.appKey }}',
+        placeholder: '{{ .Site.Params.valine.placeholder }}',
+        visitor: '{{ .Site.Params.valine.visitor }}',
+    })
+</script>
